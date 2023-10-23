@@ -79,7 +79,9 @@ public class DeleteStart {
         sList.addNode(2);  
         sList.addNode(3);  
         sList.addNode(4);  
-  
+        sList.addNode(5);  
+        sList.addNode(6);  
+        sList.addNode(7);  
         //Printing original list  
         System.out.println("Original List: ");  
         sList.display();  
