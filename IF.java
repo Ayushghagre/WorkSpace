@@ -83,7 +83,7 @@ public class DeleteStart {
         sList.addNode(6);  
         sList.addNode(7);  
         //Printing original list  
-        System.out.println("previously  List: ");  
+        System.out.println("previ  List: ");  
         sList.display();  
   
         while(sList.head != null) {  
