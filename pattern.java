@@ -4,7 +4,7 @@ public static void main(String args[])
 {   
 
 int i, j, row=6;   
-System.out.println("Right Angled ");
+System.out.println("Right Angled Triangle ");
 for(i=0; i<row; i++)   
 {   
  
