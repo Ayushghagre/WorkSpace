@@ -2,7 +2,7 @@ public class LeftTrianglePattern
 {    
 public static void main(String args[])   
 {    
-System.out.println("LFP.....");
+
 int i, j, row = 6;       
 
 for (i=0; i<row; i++)   
