@@ -11,7 +11,7 @@ for (i=0; i<row; i++)
 for (j=2*(row-i); j>=0; j--)         
 {  
   
-System.out.print(" ");   
+System.out.print("the pattern is");   
 }   
 
 for (j=0; j<=i; j++ )   
