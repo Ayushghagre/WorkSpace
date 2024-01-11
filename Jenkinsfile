@@ -6,7 +6,7 @@ node
     stage("Clearing Workspace")
     {
        
-         if(branchName=="develop"||branchName=="main"||branchName=="Clearworkspace"||branchName=="function1"||branchName=="Release")
+         if(branchName=="develop"||branchName=="main"||branchName=="Clear_workspace"||branchName=="function1"||branchName=="Release"||branchName=="patch")
          {
             echo "no Need to delete"
          }
