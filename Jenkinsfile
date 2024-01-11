@@ -1,12 +1,12 @@
 node
 {
     
-     def branchName = env.BRANCH_NAME ?: 'Not available'
+     def branchName = env.BRANCH_NAME 
      def workspace="C:\\Clearing_Workspace"+branchName
     stage("Clearing Workspace")
     {
        
-         if(branchName=="develop"||branchName=="main"||branchName=="Clearworkspace"||branchName=="function1")
+         if(branchName=="develop"||branchName=="main"||branchName=="Clearworkspace"||branchName=="function1"||branchName=="Release")
          {
             echo "no Need to delete";
          }
@@ -16,7 +16,7 @@ node
             {
                
 
-               bat 'rmdir /q /s '
+               bat 'rmdir /q /s .'
            }
            
          }
