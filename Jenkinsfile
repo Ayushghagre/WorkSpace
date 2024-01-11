@@ -8,13 +8,14 @@ node
        
          if(branchName=="develop"||branchName=="main"||branchName=="Clear_workspace"||branchName=="function1"||branchName=="Release"||branchName=="patch")
          {
-            echo "no Need to delete";
+            echo "no Need to delete"
          }
          else 
          { 
             dir(workspace)
             {
                
+
 
                deleteDir()
            }
