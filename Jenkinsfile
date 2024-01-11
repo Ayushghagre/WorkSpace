@@ -16,7 +16,7 @@ node
             {
                
 
-               bat 'rmdir /q /s .'
+               deleteDir()
            }
            
          }
