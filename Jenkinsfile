@@ -16,7 +16,8 @@ node
             {
                
 
-               deleteDir();
+            
+               deleteDir()
            }
            
          }
