@@ -1,28 +1,27 @@
-pipeline {
-    agent any
+node
+{
+    
+     def branchName = env.BRANCH_NAME ?: 'Not available'
+     def workspace="C:\\Clearing_Workspace"+branchName
+    stage("Clearing Workspace")
+    {
+       
+         if(branchName=="develop"||branchName=="main"||branchName=="Clearworkspace"||branchName=="function1")
+         {
+            echo "no Need to delete";
+         }
+         else 
+         { 
+            dir(workspace)
+            {
+               
 
-    stages {
-        stage('Display Branch Name') {
-            steps {
-                script {
-                    // Get the current branch name
-                    def branchName = env.BRANCH_NAME ?: 'Not available'
+               bat 'rmdir /q /s '
+           }
+           
+         }
 
-                    // Display the branch name
-                    echo "Current Branch: ${branchName}"
-                }
-            }
-        }
 
-        // Add more stages as needed for your build/test/deployment steps
-        stage('Build') {
-            steps {
-                echo 'Building...'
-                // Add your build steps here
-            }
-        }
-
-        // Add more stages as needed
 
     }
 }
