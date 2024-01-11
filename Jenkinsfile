@@ -8,7 +8,7 @@ node
        
          if(branchName=="develop"||branchName=="main"||branchName=="Clearworkspace"||branchName=="function1"||branchName=="Release")
          {
-            echo "no Need to delete";
+            echo "no Need to delete"
          }
          else 
          { 
