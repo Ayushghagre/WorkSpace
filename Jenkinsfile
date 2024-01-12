@@ -1,12 +1,18 @@
-node
-{
-    
-     def branchName = env.BRANCH_NAME 
-     def workspace="C:\\Clearing_Workspace"+branchName
-    stage("Clearing Workspace")
-    {
-       
-        def branchesToExclude = ["develop", "main", "Clearworkspace", "function1", "Release"]
+node {
+    properties([
+        pipelineTriggers([
+            cron('*/5 4-23 * * 1-5')
+
+        ])
+    ])
+
+    def branchName = env.BRANCH_NAME
+    def workspace = "C:\\Clearing_Workspace\\" + branchName
+
+    try {
+        stage("Clearing Workspace") {
+
+def branchesToExclude = ["develop", "main", "Clearworkspace", "function1", "Release"]
 
             if (branchesToExclude.contains(branchName)) {
                 echo "No need to delete the workspace"
@@ -15,8 +21,10 @@ node
                     deleteDir()
                 }
             }
-
-
-
+        }
+    } catch (Exception e) 
+    {
+        echo "Encountered an exception"
+        echo e.toString()
     }
 }
