@@ -6,7 +6,10 @@ node
     stage("Clearing Workspace")
     {
        
-         def branchesToExclude = ["develop", "main", "Clearworkspace", "function1", "Release"]
+
+        def branchesToExclude = ["develop", "main", "Clearworkspace", "function1", "Release"]
+
+            
 
             if (branchesToExclude.contains(branchName)) {
                 echo "No need to delete the workspace"
