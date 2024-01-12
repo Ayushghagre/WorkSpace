@@ -6,22 +6,15 @@ node
     stage("Clearing Workspace")
     {
        
-         if(branchName=="develop"||branchName=="main"||branchName=="Clear_workspace"||branchName=="function1"||branchName=="Release"||branchName=="patch")
-         {
-            echo "no Need to delete"
-         }
-         else 
-         { 
-            dir(workspace)
-            {
-               
+         def branchesToExclude = ["develop", "main", "Clearworkspace", "function1", "Release"]
 
-
-               deleteDir()
-           }
-           
-         }
-
+            if (branchesToExclude.contains(branchName)) {
+                echo "No need to delete the workspace"
+            } else {
+                dir(workspace) {
+                    deleteDir()
+                }
+            }
 
 
     }
